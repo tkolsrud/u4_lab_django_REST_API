@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from rest_framework.routers import DefaultRouter
 
-urlspatters = [
+urlpatterns = [
     path('conferences/', views.ConferenceList.as_view(), name='conference_list'),
     path('conferences/<int:pk>', views.ConferenceDetail.as_view(), name='conference_detail'),
     path('teams/', views.TeamList.as_view(), name='team_list'),

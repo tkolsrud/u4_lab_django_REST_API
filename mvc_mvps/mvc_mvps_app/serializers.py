@@ -21,7 +21,7 @@ class PlayerSerializer(serializers.HyperlinkedModelSerializer):
         fields = all 
 
 class TeamSerializer(serializers.HyperlinkedModelSerializer):
-    conference = serializers.HyperLinkedRelatedField(
+    conference = serializers.HyperlinkedRelatedField(
         view_name='conference_detail',
         read_only='true'
     )

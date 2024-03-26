@@ -20,13 +20,13 @@ class Team(models.Model):
     
 class Player(models.Model):
     class Position(models.TextChoices):
-        POINTGUARD = 'PG', _("Pointguard")
-        SHOOTING_GUARD = 'SG', _('Guard')
-        FORWARD = 'F', _('Forward')
-        CENTER = 'C', _('Center')
+        POINTGUARD = "PG"
+        SHOOTING_GUARD = 'SG'
+        FORWARD = 'F'
+        CENTER = 'C'
 
     name = models.CharField(max_length=100)
     age = models.IntegerField(default=19)
     position = models.CharField(choices=Position, default=Position.SHOOTING_GUARD) 
-    injured = models.models.BooleanField()
+    injured = models.BooleanField()
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='players') 

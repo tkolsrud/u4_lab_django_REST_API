@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'mvc_mvps.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mvcmvp',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mvcmvp',
         'USER': 'userman',
         'PASSWORD': 'password',
